@@ -32,9 +32,8 @@ def new_book():
 def create_book():
     title = request.form['title']
     genre = request.form['genre']
-    author_id = request.form['author_id']
-    author = author_repository.select(author_id)
-
+    author = request.form['author']
+    author = author_repository.select(author)
     book = Book(title, genre, author)
     book_repository.save(book)
     return redirect("/books")
