@@ -24,3 +24,5 @@ book_repository.save(book2)
 book3 = Book("Lord of the Rings", "Historical Fantasy", author2)
 book_repository.save(book3)
 
+book_repository.delete(book1.id)
+
